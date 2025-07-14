@@ -1,0 +1,33 @@
+{
+  "ios": {
+    "appId": "abcdf",
+    "endpointBaseUrl": "https://mock-api.emb-eng.com/namespace/jon/api",
+    "disableAutomaticViewCapture": true,
+    "disableNetworkSpanForwarding": false,
+    "disabledUrlPatterns": [
+      "grafana.net"
+    ]
+  },
+  "exporters": {
+    "logExporter": {
+      "endpoint": "https://otlp-gateway-prod-us-central-0.grafana.net/otlp/v1/logs",
+      "headers": [
+        {
+          "key": "Authorization",
+          "token": "Basic __TOKEN__"
+        }
+      ],
+      "timeout": 30000
+    },
+    "traceExporter": {
+      "endpoint": "https://otlp-gateway-prod-us-central-0.grafana.net/otlp/v1/traces",
+      "headers": [
+        {
+          "key": "Authorization",
+          "token": "Basic __TOKEN__"
+        }
+      ],
+      "timeout": 30000
+    }
+  }
+}
